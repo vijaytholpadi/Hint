@@ -6,16 +6,21 @@
 //  Copyright © 2017 TheGeekProjekt. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "HTAppDelegate.h"
 
-@interface AppDelegate ()
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+
+@interface HTAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation HTAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [Fabric with:@[[Crashlytics class]]];
+
     return YES;
 }
 
