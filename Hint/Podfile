@@ -7,6 +7,7 @@ target 'Hint' do
 
   # Pods for Hint
   pod 'Bolts'
+  pod 'CLLocationManager-blocks'
   pod "Crashlytics"
   pod "Fabric"
   pod 'Parse'

@@ -16,6 +16,7 @@
 		CD2EEF671E6D6B780090C10E /* HintTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2EEF661E6D6B780090C10E /* HintTests.m */; };
 		CD2EEF781E6D702E0090C10E /* HTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2EEF771E6D702E0090C10E /* HTAppDelegate.m */; };
 		CDECA4EF1E6D8E2900EE1E2B /* HTDashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDECA4EE1E6D8E2900EE1E2B /* HTDashboardViewController.m */; };
+		CDECA4F41E6DA02700EE1E2B /* HTLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CDECA4F31E6DA02700EE1E2B /* HTLocationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		CD2EEF771E6D702E0090C10E /* HTAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTAppDelegate.m; sourceTree = "<group>"; };
 		CDECA4ED1E6D8E2900EE1E2B /* HTDashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTDashboardViewController.h; sourceTree = "<group>"; };
 		CDECA4EE1E6D8E2900EE1E2B /* HTDashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTDashboardViewController.m; sourceTree = "<group>"; };
+		CDECA4F21E6DA02700EE1E2B /* HTLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTLocationManager.h; sourceTree = "<group>"; };
+		CDECA4F31E6DA02700EE1E2B /* HTLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTLocationManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				CD2EEF711E6D6F330090C10E /* AppDelegate */,
+				CDECA4F01E6DA00F00EE1E2B /* Managers */,
 				CD2EEF721E6D6F330090C10E /* Models */,
 				CD2EEF731E6D6F330090C10E /* ViewControllers */,
 				CD2EEF741E6D6F330090C10E /* ViewModels */,
@@ -189,6 +193,23 @@
 				CDECA4EE1E6D8E2900EE1E2B /* HTDashboardViewController.m */,
 			);
 			path = HTDashboardViewController;
+			sourceTree = "<group>";
+		};
+		CDECA4F01E6DA00F00EE1E2B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CDECA4F11E6DA00F00EE1E2B /* HTLocationManager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		CDECA4F11E6DA00F00EE1E2B /* HTLocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				CDECA4F21E6DA02700EE1E2B /* HTLocationManager.h */,
+				CDECA4F31E6DA02700EE1E2B /* HTLocationManager.m */,
+			);
+			path = HTLocationManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,6 +431,7 @@
 			files = (
 				CD2EEF781E6D702E0090C10E /* HTAppDelegate.m in Sources */,
 				CDECA4EF1E6D8E2900EE1E2B /* HTDashboardViewController.m in Sources */,
+				CDECA4F41E6DA02700EE1E2B /* HTLocationManager.m in Sources */,
 				CD2EEF4E1E6D6B780090C10E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
