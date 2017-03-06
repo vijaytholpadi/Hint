@@ -60,7 +60,7 @@
          configuration.clientKey = @"db7f3e1b2b1c47be8cc739c5c0fb808f2f531fbd";
 
         // Uncomment the following line and change to your Parse Server address;
-         configuration.server = @"http://10.47.184.96:80/parse";
+         configuration.server = @"http://ec2-52-33-176-59.us-west-2.compute.amazonaws.com:80/parse";
 
         // Enable storing and querying data from Local Datastore. Remove this line if you don't want to
         // use Local Datastore features or want to use cachePolicy.
