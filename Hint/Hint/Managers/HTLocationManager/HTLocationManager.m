@@ -67,7 +67,7 @@ static NSString *beaconUUIDString = @"62FD1802-A807-441B-A869-5483398238A7";
                 //Clear button
                 [self.delegate didLoseInterestRegionBeacon];
             }
-        [self.delegate beaconsFoundWithCount:beacons.count];
+        [self.delegate beaconsFoundWithCount:(int)beacons.count];
     }];
 
 
