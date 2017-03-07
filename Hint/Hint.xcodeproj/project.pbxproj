@@ -15,6 +15,7 @@
 		CD2EEF5C1E6D6B780090C10E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD2EEF5A1E6D6B780090C10E /* LaunchScreen.storyboard */; };
 		CD2EEF671E6D6B780090C10E /* HintTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2EEF661E6D6B780090C10E /* HintTests.m */; };
 		CD2EEF781E6D702E0090C10E /* HTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2EEF771E6D702E0090C10E /* HTAppDelegate.m */; };
+		CD9F18F91E6E8E1600A14E2F /* UIColor+HTColor.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9F18F81E6E8E1600A14E2F /* UIColor+HTColor.m */; };
 		CDECA4EF1E6D8E2900EE1E2B /* HTDashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDECA4EE1E6D8E2900EE1E2B /* HTDashboardViewController.m */; };
 		CDECA4F41E6DA02700EE1E2B /* HTLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CDECA4F31E6DA02700EE1E2B /* HTLocationManager.m */; };
 /* End PBXBuildFile section */
@@ -47,6 +48,8 @@
 		CD2EEF681E6D6B780090C10E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD2EEF761E6D702E0090C10E /* HTAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTAppDelegate.h; sourceTree = "<group>"; };
 		CD2EEF771E6D702E0090C10E /* HTAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTAppDelegate.m; sourceTree = "<group>"; };
+		CD9F18F71E6E8E1600A14E2F /* UIColor+HTColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HTColor.h"; sourceTree = "<group>"; };
+		CD9F18F81E6E8E1600A14E2F /* UIColor+HTColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HTColor.m"; sourceTree = "<group>"; };
 		CDECA4ED1E6D8E2900EE1E2B /* HTDashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTDashboardViewController.h; sourceTree = "<group>"; };
 		CDECA4EE1E6D8E2900EE1E2B /* HTDashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTDashboardViewController.m; sourceTree = "<group>"; };
 		CDECA4F21E6DA02700EE1E2B /* HTLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTLocationManager.h; sourceTree = "<group>"; };
@@ -117,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				CD2EEF711E6D6F330090C10E /* AppDelegate */,
+				CD9F18F51E6E8DE700A14E2F /* Categories */,
 				CDECA4F01E6DA00F00EE1E2B /* Managers */,
 				CD2EEF721E6D6F330090C10E /* Models */,
 				CD2EEF731E6D6F330090C10E /* ViewControllers */,
@@ -184,6 +188,23 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CD9F18F51E6E8DE700A14E2F /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				CD9F18F61E6E8E0200A14E2F /* UIColor+HTColor */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		CD9F18F61E6E8E0200A14E2F /* UIColor+HTColor */ = {
+			isa = PBXGroup;
+			children = (
+				CD9F18F71E6E8E1600A14E2F /* UIColor+HTColor.h */,
+				CD9F18F81E6E8E1600A14E2F /* UIColor+HTColor.m */,
+			);
+			path = "UIColor+HTColor";
 			sourceTree = "<group>";
 		};
 		CDECA4EC1E6D8D4B00EE1E2B /* HTDashboardViewController */ = {
@@ -431,6 +452,7 @@
 			files = (
 				CD2EEF781E6D702E0090C10E /* HTAppDelegate.m in Sources */,
 				CDECA4EF1E6D8E2900EE1E2B /* HTDashboardViewController.m in Sources */,
+				CD9F18F91E6E8E1600A14E2F /* UIColor+HTColor.m in Sources */,
 				CDECA4F41E6DA02700EE1E2B /* HTLocationManager.m in Sources */,
 				CD2EEF4E1E6D6B780090C10E /* main.m in Sources */,
 			);
