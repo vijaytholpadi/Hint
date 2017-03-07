@@ -8,10 +8,16 @@
 
 #import "HTDashboardViewController.h"
 
+//Categories
+#import "UIColor+HTColor.h"
+
+//Managers
 #import "HTLocationManager.h"
 
 @interface HTDashboardViewController ()<HTBeaconRangingDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *hintsNearbyStaticLabel;
 @property (weak, nonatomic) IBOutlet UILabel *beaconCountLabel;
+@property (weak, nonatomic) IBOutlet UIButton *validBeaconFoundButton;
 
 @end
 
@@ -20,10 +26,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self themeScreen];
+
     [HTLocationManager sharedInstance].delegate = self;
     [[HTLocationManager sharedInstance] startLocationManager];
 }
 
+- (void)themeScreen {
+    [self.view setBackgroundColor:[UIColor ht_BlueColor]];
+    [self.hintsNearbyStaticLabel setTextColor:[UIColor ht_YellowColor]];
+    [self.beaconCountLabel setTextColor:[UIColor ht_YellowColor]];
+    [self.validBeaconFoundButton setTitleColor:[UIColor ht_BlueColor] forState:UIControlStateNormal];
+    [self.validBeaconFoundButton setBackgroundColor:[UIColor ht_BlueColor]];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
