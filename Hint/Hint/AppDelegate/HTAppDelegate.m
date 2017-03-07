@@ -8,12 +8,16 @@
 
 #import "HTAppDelegate.h"
 
+//Coordinators
+#import "HTAppCoordinator.h"
+
+//Frameworks
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
 #import <Parse/Parse.h>
 
 @interface HTAppDelegate ()
-
+@property (nonatomic, strong) HTAppCoordinator *coordinator;
 @end
 
 @implementation HTAppDelegate
@@ -23,6 +27,12 @@
     [Fabric with:@[[Crashlytics class]]];
     [self configureParse];
 
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = [UINavigationController new];
+    self.coordinator = [[HTAppCoordinator alloc] initWithNavigationController:(UINavigationController*)self.window.rootViewController];
+
+    [self.coordinator start];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
