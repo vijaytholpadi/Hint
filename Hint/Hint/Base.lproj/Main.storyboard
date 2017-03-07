@@ -21,17 +21,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bU-hZ-gsd">
-                                <rect key="frame" x="155" y="217" width="66.5" height="31.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="27"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bU-hZ-gsd">
+                                <rect key="frame" x="177.5" y="217" width="20" height="48.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="41"/>
+                                <color key="textColor" red="1" green="0.86666666670000003" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Hints nearby" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYs-OD-eWP">
+                                <rect key="frame" x="42.5" y="165" width="291" height="37"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="31"/>
+                                <color key="textColor" red="1" green="0.86666666670000003" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uZ-Us-jtt">
+                                <rect key="frame" x="-0.5" y="627" width="375" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.86666666670000003" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="vhw-2W-PKk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Psst! Wanna know something? 👀"/>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.070588235294117646" green="0.25098039215686274" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1bU-hZ-gsd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="197" id="2fd-51-8CQ"/>
+                            <constraint firstItem="mYs-OD-eWP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="FJX-Gb-a5L"/>
+                            <constraint firstItem="9uZ-Us-jtt" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Llg-0b-kqp"/>
+                            <constraint firstItem="9uZ-Us-jtt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RjQ-yz-9fa"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mYs-OD-eWP" secondAttribute="trailing" constant="10" id="a6j-IT-15f"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9uZ-Us-jtt" secondAttribute="bottom" id="dIb-0e-9XK"/>
                             <constraint firstItem="1bU-hZ-gsd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ekq-QL-zpB"/>
+                            <constraint firstItem="mYs-OD-eWP" firstAttribute="centerX" secondItem="1bU-hZ-gsd" secondAttribute="centerX" id="fYM-vp-o1l"/>
+                            <constraint firstItem="1bU-hZ-gsd" firstAttribute="top" secondItem="mYs-OD-eWP" secondAttribute="bottom" constant="15" id="mSh-Uz-xJG"/>
                         </constraints>
                     </view>
                     <connections>
@@ -40,6 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
 </document>
