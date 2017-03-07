@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *beaconCountLabel;
 @property (weak, nonatomic) IBOutlet UIButton *validBeaconFoundButton;
 
+@property (nonatomic, strong) CLBeacon *validBeacon;
+
 @end
 
 @implementation HTDashboardViewController
@@ -37,11 +39,16 @@
     [self.hintsNearbyStaticLabel setTextColor:[UIColor ht_YellowColor]];
     [self.beaconCountLabel setTextColor:[UIColor ht_YellowColor]];
     [self.validBeaconFoundButton setTitleColor:[UIColor ht_BlueColor] forState:UIControlStateNormal];
-    [self.validBeaconFoundButton setBackgroundColor:[UIColor ht_BlueColor]];
+    [self.validBeaconFoundButton setBackgroundColor:[UIColor ht_YellowColor]];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - IBAction methods
+- (IBAction)didPressValidBeaconFoundButton:(id)sender {
+    [self.delegate dashboardViewControllerDidTapViewMessagesForBeacon:self.validBeacon];
 }
 
 #pragma mark - HTBeaconRangingDelegate methods
@@ -52,10 +59,13 @@
 
 - (void)didFindInterestRegionBeacon:(CLBeacon *)beacon {
     //Enable button to goto MessagesViewController
-
+    self.validBeaconFoundButton.hidden = NO;
+    self.validBeacon = beacon;
 }
 
 - (void)didLoseInterestRegionBeacon {
     //Disable/Clear button to goto MessageViewController
+    self.validBeaconFoundButton.hidden = YES;
+    self.validBeacon = nil;
 }
 @end
