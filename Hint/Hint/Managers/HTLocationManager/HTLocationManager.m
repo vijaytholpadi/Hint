@@ -11,6 +11,9 @@
 //Categories
 #import <CLLocationManager+blocks.h>
 
+//Managers
+#import "HTNotificationManager.h"
+
 //Frameworks
 #import <CoreLocation/CoreLocation.h>
 
@@ -39,7 +42,7 @@ static NSString *beaconUUIDString = @"62FD1802-A807-441B-A869-5483398238A7";
     //To Trigger location permission window
     if ([CLLocationManager isLocationUpdatesAvailable]) {
         [self.manager startUpdatingLocationWithUpdateBlock:^(CLLocationManager *manager, CLLocation *location, NSError *error, BOOL *stopUpdating) {
-            *stopUpdating = YES;
+            [self enableBackgroundLocationAccessIfNecessary];
         }];
 
         [self setupBeaconRegionForUUIDString:beaconUUIDString forIdentifier:@"HintBeaconRegion"];
@@ -61,6 +64,7 @@ static NSString *beaconUUIDString = @"62FD1802-A807-441B-A869-5483398238A7";
             CLBeacon *nearestBeacon = [beacons firstObject];
             if (nearestBeacon.proximity == CLProximityImmediate || nearestBeacon.proximity == CLProximityNear) {
                 [self.delegate didFindInterestRegionBeacon:nearestBeacon];
+                [HTNotificationManager fireNotificationForBeacon:nearestBeacon];
             } else {
                 //Clear button
                 [self.delegate didLoseInterestRegionBeacon];
@@ -87,5 +91,17 @@ static NSString *beaconUUIDString = @"62FD1802-A807-441B-A869-5483398238A7";
 
 - (void)startRangingForBeaconRegion:(CLBeaconRegion*)beaconRegion {
     [self.manager startRangingBeaconsInRegion:beaconRegion];
+}
+
+//Helper function to enable Background Location access
+- (void)enableBackgroundLocationAccessIfNecessary {
+    //To get the background updates in iOS 9 onwards,`allowsBackgroundLocationUpdates` has to be used only when Always mode is chosen, else Blue band appears on the screen top.
+    if([self.manager respondsToSelector:@selector(setAllowsBackgroundLocationUpdates:)]) {
+        if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedAlways) {
+            self.manager.allowsBackgroundLocationUpdates = YES;
+        } else {
+            self.manager.allowsBackgroundLocationUpdates = NO;
+        }
+    }
 }
 @end

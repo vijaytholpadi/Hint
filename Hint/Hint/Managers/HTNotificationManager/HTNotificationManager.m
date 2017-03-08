@@ -8,20 +8,27 @@
 
 #import "HTNotificationManager.h"
 
+//Categories
+#import "CLBeacon+NSCoding.h"
+
 //Frameworks
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
 @implementation HTNotificationManager
-- (void)fireNotificationForBeacon:(CLBeacon*)beacon {
-    //Depending on app state, fire the notification
-    UIApplicationState applicationState = [UIApplication sharedApplication].applicationState;
++ (void)fireNotificationForBeacon:(CLBeacon*)beacon {
+    if ([UIApplication sharedApplication].applicationState == UIApplicationStateBackground) {
 
-    if (applicationState == UIApplicationStateActive) {
-        //Show in app notification
-    } else if ((applicationState == UIApplicationStateInactive) || (applicationState == UIApplicationStateBackground)) {
-        //Throw a UILocalNotification
-//        UILocalNotification
+        UILocalNotification *notification = [[UILocalNotification alloc] init];
+        notification.alertBody = @"Psst! Check out this secret.";
+        notification.alertAction = @"View Note";
+        notification.soundName = @"default";
+        notification.userInfo = @{@"beacon":[beacon archivedData],
+                                  @"UUID":beacon.proximityUUID.UUIDString,
+                                  @"major":beacon.major,
+                                  @"minor":beacon.minor};
+
+        [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
     }
 }
 @end

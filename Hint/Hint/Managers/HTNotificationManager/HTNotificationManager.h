@@ -10,5 +10,5 @@
 @class CLBeacon;
 
 @interface HTNotificationManager : NSObject
-- (void)fireNotificationForBeacon:(CLBeacon*)beacon;
++ (void)fireNotificationForBeacon:(CLBeacon*)beacon;
 @end
