@@ -9,8 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+@class CLBeacon;
+
 @interface HTAppCoordinator : NSObject
 - (instancetype)initWithNavigationController:(UINavigationController*)navigationController;
-
 - (void)start;
+
+//Notification Deeplink - Beacon
+- (void)showNotesForBeacon:(CLBeacon*)beacon;
 @end

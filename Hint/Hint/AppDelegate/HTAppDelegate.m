@@ -8,6 +8,9 @@
 
 #import "HTAppDelegate.h"
 
+//Categories
+#import "CLBeacon+NSCoding.h"
+
 //Coordinators
 #import "HTAppCoordinator.h"
 
@@ -105,4 +108,14 @@
         [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
     }
 }
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    if ([UIApplication sharedApplication].applicationState == UIApplicationStateActive || [UIApplication sharedApplication].applicationState == UIApplicationStateInactive) {
+        NSDictionary *notificationPayload = notification.userInfo;
+
+        CLBeacon *beacon = [CLBeacon unArchivedBeaconFromData:notificationPayload[@"beacon"]];
+        [self.coordinator showNotesForBeacon:beacon];
+    }
+}
+
 @end

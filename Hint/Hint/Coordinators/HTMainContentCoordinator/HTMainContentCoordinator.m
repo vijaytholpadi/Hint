@@ -47,4 +47,9 @@
     composeViewController.beacon = beacon;
     [self.navigationController pushViewController:composeViewController animated:YES];
 }
+
+//Notification Deeplink - Beacon
+- (void)showNotesForBeacon:(CLBeacon*)beacon {
+    [self dashboardViewControllerDidTapViewMessagesForBeacon:beacon];
+}
 @end

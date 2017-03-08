@@ -40,4 +40,10 @@
     [mainContentCoordinator start];
     [self.childCoordinators addObject:mainContentCoordinator];
 }
+
+//Notification Deeplink - Beacon
+- (void)showNotesForBeacon:(CLBeacon*)beacon {
+    HTMainContentCoordinator *mainContentCoordinator = self.childCoordinators[0];
+    [mainContentCoordinator showNotesForBeacon:beacon];
+}
 @end
