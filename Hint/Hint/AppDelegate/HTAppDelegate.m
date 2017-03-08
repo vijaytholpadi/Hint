@@ -28,6 +28,7 @@
     [Fabric with:@[[Crashlytics class]]];
     [self configureParse];
     [self enableIQKeyboardManager];
+    [self askForNotificationPermissions];
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [UINavigationController new];
@@ -99,4 +100,9 @@
     [IQKeyboardManager sharedManager].enable = YES;
 }
 
+- (void)askForNotificationPermissions {
+    if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]){
+        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
+    }
+}
 @end
