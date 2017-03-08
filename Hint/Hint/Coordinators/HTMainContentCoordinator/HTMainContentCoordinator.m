@@ -10,8 +10,10 @@
 
 //ViewControllers
 #import "HTDashboardViewController.h"
+#import "HTMessagesViewController.h"
+#import "HTComposeViewController.h"
 
-@interface HTMainContentCoordinator ()<HTDashBoardCoordinationDelegate>
+@interface HTMainContentCoordinator ()<HTDashBoardCoordinationDelegate, HTNotesCoordinationDelegate>
 @property (nonatomic, strong) UINavigationController *navigationController;
 @property (nonatomic, strong) NSMutableArray *childCoordinators;
 @end
@@ -27,11 +29,22 @@
 
 - (void)start {
     HTDashboardViewController *dashboardViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"HTDashboardViewController"];
+    dashboardViewController.delegate = self;
     [self.navigationController pushViewController:dashboardViewController animated:YES];
 }
 
 #pragma mark - HTDashBoardCoordinationDelegate Methods
--(void)dashboardViewControllerDidTapViewMessagesForBeacon:(CLBeacon *)beacon {
-    
+- (void)dashboardViewControllerDidTapViewMessagesForBeacon:(CLBeacon *)beacon {
+    //TODO: Move the network call to this level
+    HTMessagesViewController *messagesViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"HTMessagesViewController"];
+    messagesViewController.delegate = self;
+    messagesViewController.beacon = beacon;
+    [self.navigationController pushViewController:messagesViewController animated:YES];
+}
+
+- (void)notesViewControllerDidTapAddNoteForBeacon:(CLBeacon *)beacon {
+    HTComposeViewController *composeViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"HTComposeViewController"];
+    composeViewController.beacon = beacon;
+    [self.navigationController pushViewController:composeViewController animated:YES];
 }
 @end
