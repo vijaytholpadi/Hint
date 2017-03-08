@@ -57,8 +57,6 @@ static NSString *beaconUUIDString = @"62FD1802-A807-441B-A869-5483398238A7";
 
     //Did range beacons
     [self.manager didRangeBeaconsWithBlock:^(CLLocationManager *manager, NSArray *beacons, CLBeaconRegion *region) {
-            NSLog(@"Our new location: %@", [beacons firstObject]);
-
             //Find out the nearest beacon
             CLBeacon *nearestBeacon = [beacons firstObject];
             if (nearestBeacon.proximity == CLProximityImmediate || nearestBeacon.proximity == CLProximityNear) {
