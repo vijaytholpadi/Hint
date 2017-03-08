@@ -15,6 +15,7 @@
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
 #import <Parse/Parse.h>
+#import <IQKeyboardManager/IQKeyboardManager.h>
 
 @interface HTAppDelegate ()
 @property (nonatomic, strong) HTAppCoordinator *coordinator;
@@ -26,6 +27,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [Fabric with:@[[Crashlytics class]]];
     [self configureParse];
+    [self enableIQKeyboardManager];
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [UINavigationController new];
@@ -91,6 +93,10 @@
     defaultACL.publicReadAccess = YES;
 
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
+}
+
+- (void)enableIQKeyboardManager {
+    [IQKeyboardManager sharedManager].enable = YES;
 }
 
 @end

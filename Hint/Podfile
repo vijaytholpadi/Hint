@@ -10,6 +10,7 @@ target 'Hint' do
   pod 'CLLocationManager-blocks'
   pod "Crashlytics"
   pod "Fabric"
+  pod 'IQKeyboardManager'
   pod 'Parse'
   pod 'ParseUI'
   

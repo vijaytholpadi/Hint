@@ -9,6 +9,7 @@ PODS:
   - Crashlytics (3.8.4):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.11)
+  - IQKeyboardManager (4.0.8)
   - Parse (1.14.2):
     - Bolts/Tasks (~> 1.8)
   - ParseUI (1.2.0):
@@ -20,6 +21,7 @@ DEPENDENCIES:
   - CLLocationManager-blocks
   - Crashlytics
   - Fabric
+  - IQKeyboardManager
   - Parse
   - ParseUI
 
@@ -28,9 +30,10 @@ SPEC CHECKSUMS:
   CLLocationManager-blocks: ae34b44992b3d26de10d27d51043a123444efb1b
   Crashlytics: 79e236942ca1e7fc641df1feb9a275360a78ab6a
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
+  IQKeyboardManager: 1a8189fa153bf09044355ee0ad36826f6767e7f7
   Parse: 4335d65f40cb3d43190d723144bbe1afb9c38230
   ParseUI: af2eba584799da4a9fbdac0e178662d7438b502e
 
-PODFILE CHECKSUM: 5378dacd98bd5216cac24f92ba2f22321873c162
+PODFILE CHECKSUM: 5fee820575b89b5bf636f145ae8c0706c8502dd2
 
 COCOAPODS: 1.1.1
