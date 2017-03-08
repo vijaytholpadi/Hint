@@ -22,6 +22,8 @@
     if (!self) return nil;
 
     _navigationController = navigationController;
+
+    self.childCoordinators = [NSMutableArray array];
     return self;
 }
 
