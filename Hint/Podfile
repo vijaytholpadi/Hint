@@ -11,6 +11,7 @@ target 'Hint' do
   pod "Crashlytics"
   pod "Fabric"
   pod 'Parse'
+  pod 'ParseUI'
   
   target 'HintTests' do
     inherit! :search_paths
