@@ -11,15 +11,19 @@
 @class CLBeacon;
 
 @protocol HTBeaconRangingDelegate <NSObject>
+
 @optional
 - (void)beaconsFoundWithCount:(int)numberOfBeacons;
 - (void)didFindInterestRegionBeacon:(CLBeacon*)beacon;
 - (void)didLoseInterestRegionBeacon;
+
 @end
 
 @interface HTLocationManager : NSObject
+
 @property (nonatomic, weak) id <HTBeaconRangingDelegate> delegate;
 
 + (HTLocationManager*)sharedInstance;
 - (void)startLocationManager;
+
 @end

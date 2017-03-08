@@ -19,6 +19,7 @@
 @end
 
 @implementation HTMainContentCoordinator
+
 - (instancetype)initWithNavigationController:(UINavigationController*)navigationController {
     self = [self init];
     if (!self) return nil;
@@ -52,4 +53,5 @@
 - (void)showNotesForBeacon:(CLBeacon*)beacon {
     [self dashboardViewControllerDidTapViewMessagesForBeacon:beacon];
 }
+
 @end

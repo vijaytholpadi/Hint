@@ -11,5 +11,7 @@
 #import <UIKit/UIKit.h>
 
 @interface HTMessagesTableViewDataSource : NSObject<UITableViewDataSource>
+
 @property (nonatomic, strong) NSArray *notes;
+
 @end

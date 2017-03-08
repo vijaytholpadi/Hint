@@ -12,6 +12,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 @implementation HTBeacon
+
 + (instancetype)getHTBeaconFromCLBeacon:(CLBeacon*)beacon {
     HTBeacon *htBeacon = [HTBeacon new];
     htBeacon.UUID = beacon.proximityUUID.UUIDString;

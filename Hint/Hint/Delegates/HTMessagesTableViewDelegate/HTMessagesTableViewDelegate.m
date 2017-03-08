@@ -9,6 +9,7 @@
 #import "HTMessagesTableViewDelegate.h"
 
 @implementation HTMessagesTableViewDelegate
+
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     //TODO:Send event for Analytics Maybe?
 }

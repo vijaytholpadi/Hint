@@ -15,14 +15,15 @@
 #import "HTNote.h"
 
 @interface HTComposeViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
 @property (weak, nonatomic) IBOutlet UIButton *uploadPlaceholderButton;
 @property (weak, nonatomic) IBOutlet UIButton *publishNoteButton;
 @property (weak, nonatomic) IBOutlet UITextView *inputTextView;
 
-//@property (nonatomic, strong) UIImage *imageToAttachToNote;
 @end
 
 @implementation HTComposeViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
@@ -32,7 +33,6 @@
 }
 
 - (IBAction)uploadPlaceholderButtonPressed:(id)sender {
-    //Open camera, get image and set it to placeholder.
     [self showImagePickingOptions];
 }
 
@@ -80,7 +80,6 @@
         }
     }];
 }
-
 
 #pragma mark - UIImagePickerControllerDelegate methods
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {

@@ -89,6 +89,7 @@ static NSString *parseServerURL = @"http://ec2-52-33-176-59.us-west-2.compute.am
     [IQKeyboardManager sharedManager].enable = YES;
 }
 
+#pragma mark - Notification methods
 - (void)askForNotificationPermissions {
     if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]){
         [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];

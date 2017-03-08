@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface UIColor (HTColor)
+
 + (UIColor*)ht_BlueColor;
 + (UIColor*)ht_YellowColor;
+
 @end

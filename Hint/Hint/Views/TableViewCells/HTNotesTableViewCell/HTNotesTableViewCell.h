@@ -12,6 +12,8 @@
 #import <ParseUI/ParseUI.h>
 
 @interface HTNotesTableViewCell : UITableViewCell
+
 @property (weak, nonatomic) IBOutlet PFImageView *noteImageView;
 @property (weak, nonatomic) IBOutlet UILabel *noteTextLabel;
+
 @end

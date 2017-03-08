@@ -15,15 +15,14 @@
 #import <Parse/Parse.h>
 
 @implementation HTServiceManager
+
 + (void)getMessagesForBeacon:(CLBeacon*)beacon withCompletion:(notesFetchCompletionBlock)completionBlock {
-    //Fetch messages for Beacon object in Parse service
     PFQuery *query = [PFQuery queryWithClassName:@"Beacon"];
     [query whereKey:@"UUID" equalTo:beacon.proximityUUID.UUIDString];
     [query whereKey:@"major" equalTo:beacon.major.stringValue];
     [query whereKey:@"minor" equalTo:beacon.minor.stringValue];
 
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-        // Using NSPredicate
         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"parent = %@", objects[0]];
         PFQuery *query = [PFQuery queryWithClassName:@"Note" predicate:predicate];
 
@@ -33,16 +32,12 @@
     }];
 }
 
-
 + (void)postMessage:(HTNote*)note forBeacon:(CLBeacon*)beacon withCompletion:(notesPostCompletionBlock)completionBlock {
-    //Set message for Beacon object in Parse service
     PFObject *pfNote = [[PFObject alloc] initWithClassName:@"Note"];
-
     pfNote[@"photo"] = note.image;
     pfNote[@"text"] = note.text;
     pfNote[@"user"] = [PFUser currentUser];
 
-    //Fetch messages for Beacon object in Parse service
     PFQuery *query = [PFQuery queryWithClassName:@"Beacon"];
     [query whereKey:@"UUID" equalTo:beacon.proximityUUID.UUIDString];
     [query whereKey:@"major" equalTo:beacon.major.stringValue];
@@ -50,6 +45,7 @@
 
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         PFObject *pfBeacon;
+
         if (objects.count) {
             pfBeacon = objects[0];
         } else {
@@ -66,4 +62,5 @@
 
     }];
 }
+
 @end

@@ -8,11 +8,14 @@
 
 #import "HTAuthenticationCoordinator.h"
 @interface HTAuthenticationCoordinator ()
+
 @property (nonatomic, strong) UINavigationController *navigationController;
 @property (nonatomic, strong) NSMutableArray *childCoordinators;
+
 @end
 
 @implementation HTAuthenticationCoordinator
+
 - (instancetype)initWithNavigationController:(UINavigationController*)navigationController {
     self = [self init];
     if (!self) return nil;
@@ -22,6 +25,7 @@
 }
 
 - (void)start {
-
+    //TODO:
 }
+
 @end

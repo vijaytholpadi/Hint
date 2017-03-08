@@ -9,6 +9,7 @@
 #import "HTNote.h"
 
 @implementation HTNote
+
 + (NSArray*)getNotesArrayForRawArray:(NSArray*)array {
     NSMutableArray *notesArray = [NSMutableArray array];
 
@@ -21,4 +22,5 @@
     }
     return notesArray;
 }
+
 @end

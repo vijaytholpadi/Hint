@@ -10,7 +10,8 @@
 #import <UIKit/UIKit.h>
 
 @interface HTAuthenticationCoordinator : NSObject
-- (instancetype)initWithNavigationController:(UINavigationController*)navigationController;
 
+- (instancetype)initWithNavigationController:(UINavigationController*)navigationController;
 - (void)start;
+
 @end

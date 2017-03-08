@@ -11,10 +11,14 @@
 @class CLBeacon;
 
 @protocol HTDashBoardCoordinationDelegate <NSObject>
+
 @required
 - (void)dashboardViewControllerDidTapViewMessagesForBeacon:(CLBeacon*)beacon;
+
 @end
 
 @interface HTDashboardViewController : UIViewController
+
 @property (nonatomic, weak) id <HTDashBoardCoordinationDelegate> delegate;
+
 @end

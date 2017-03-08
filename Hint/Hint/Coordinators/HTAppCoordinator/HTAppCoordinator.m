@@ -12,11 +12,14 @@
 #import "HTMainContentCoordinator.h"
 
 @interface HTAppCoordinator ()
+
 @property (nonatomic, strong) UINavigationController *navigationController;
 @property (nonatomic, strong) NSMutableArray *childCoordinators;
+
 @end
 
 @implementation HTAppCoordinator
+
 - (instancetype)initWithNavigationController:(UINavigationController*)navigationController {
     self = [self init];
     if (!self) return nil;
@@ -46,4 +49,5 @@
     HTMainContentCoordinator *mainContentCoordinator = self.childCoordinators[0];
     [mainContentCoordinator showNotesForBeacon:beacon];
 }
+
 @end

@@ -11,10 +11,12 @@
 @class CLBeacon;
 
 @interface HTBeacon : NSObject
+
 @property (nonatomic, strong) NSString *UUID;
 @property (nonatomic, strong) NSString *major;
 @property (nonatomic, strong) NSString *minor;
 @property (nonatomic, strong) NSArray *notes;
 
 + (instancetype)getHTBeaconFromCLBeacon:(CLBeacon*)beacon;
+
 @end

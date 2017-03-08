@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+
 @class CLBeacon;
 
 @interface HTNotificationManager : NSObject
+
 + (void)fireNotificationForBeacon:(CLBeacon*)beacon;
+
 @end

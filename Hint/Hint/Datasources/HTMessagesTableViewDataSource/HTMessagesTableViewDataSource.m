@@ -15,6 +15,7 @@
 #import "HTNotesTableViewCell.h"
 
 @implementation HTMessagesTableViewDataSource
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -33,4 +34,5 @@
     
     return cell;
 }
+
 @end

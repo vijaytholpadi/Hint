@@ -16,9 +16,9 @@
 #import <CoreLocation/CoreLocation.h>
 
 @implementation HTNotificationManager
+
 + (void)fireNotificationForBeacon:(CLBeacon*)beacon {
     if ([UIApplication sharedApplication].applicationState == UIApplicationStateBackground) {
-
         UILocalNotification *notification = [[UILocalNotification alloc] init];
         notification.alertBody = @"Psst! Check out this secret.";
         notification.alertAction = @"View Note";
@@ -31,4 +31,5 @@
         [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
     }
 }
+
 @end

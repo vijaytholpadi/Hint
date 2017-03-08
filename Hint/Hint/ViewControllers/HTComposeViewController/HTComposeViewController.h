@@ -10,5 +10,7 @@
 @class CLBeacon;
 
 @interface HTComposeViewController : UIViewController
+
 @property (nonatomic, strong) CLBeacon *beacon;
+
 @end

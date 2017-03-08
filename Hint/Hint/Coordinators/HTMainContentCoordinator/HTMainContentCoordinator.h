@@ -12,9 +12,11 @@
 @class CLBeacon;
 
 @interface HTMainContentCoordinator : NSObject
+
 - (instancetype)initWithNavigationController:(UINavigationController*)navigationController;
 - (void)start;
 
 //Notification Deeplink - Beacon
 - (void)showNotesForBeacon:(CLBeacon*)beacon;
+
 @end

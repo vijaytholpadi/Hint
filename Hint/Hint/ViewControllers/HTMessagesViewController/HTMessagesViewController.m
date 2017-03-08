@@ -21,9 +21,11 @@
 static NSString *notesTableViewCell = @"HTNotesTableViewCell";
 
 @interface HTMessagesViewController ()
+
 @property (nonatomic, strong) HTMessagesTableViewDataSource *tableViewDataSource;
 @property (nonatomic, strong) HTMessagesTableViewDelegate *tableViewDelegate;
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
+
 @end
 
 @implementation HTMessagesViewController
@@ -62,6 +64,7 @@ static NSString *notesTableViewCell = @"HTNotesTableViewCell";
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
 - (IBAction)AddNoteButtonPressed:(id)sender {
     [self.delegate notesViewControllerDidTapAddNoteForBeacon:self.beacon];
 }

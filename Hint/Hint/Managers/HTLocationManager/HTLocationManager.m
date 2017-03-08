@@ -20,9 +20,10 @@
 //static NSString *beaconUUIDString = @"BAEA0D57-07CD-4633-8058-DFFE03F1CA7C";
 static NSString *beaconUUIDString = @"62FD1802-A807-441B-A869-5483398238A7";
 
-
 @interface HTLocationManager ()<CLLocationManagerDelegate>
+
 @property (nonatomic, strong) CLLocationManager *manager;
+
 @end
 
 @implementation HTLocationManager
@@ -72,9 +73,9 @@ static NSString *beaconUUIDString = @"62FD1802-A807-441B-A869-5483398238A7";
         [self.delegate beaconsFoundWithCount:(int)beacons.count];
     }];
 
-
     //Listener for change in authorization status
     [self.manager didChangeAuthorizationStatusWithBlock:^(CLLocationManager *manager, CLAuthorizationStatus status) {
+        //TODO: Update the UI Accordingly. Else the user will be clueless. Maybe ask him to goto settings and enable the permissions once again.
     }];
 }
 
@@ -89,6 +90,7 @@ static NSString *beaconUUIDString = @"62FD1802-A807-441B-A869-5483398238A7";
     [self startRangingForBeaconRegion:beaconRegion];
 }
 
+#pragma mark - Helper functions
 - (void)startRangingForBeaconRegion:(CLBeaconRegion*)beaconRegion {
     [self.manager startRangingBeaconsInRegion:beaconRegion];
 }

@@ -10,11 +10,15 @@
 @class CLBeacon;
 
 @protocol HTNotesCoordinationDelegate <NSObject>
+
 @required
 - (void)notesViewControllerDidTapAddNoteForBeacon:(CLBeacon*)beacon;
+
 @end
 
 @interface HTMessagesViewController : UIViewController
+
 @property (nonatomic, weak) id <HTNotesCoordinationDelegate> delegate;
 @property (nonatomic, strong) CLBeacon *beacon;
+
 @end

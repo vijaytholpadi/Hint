@@ -15,10 +15,10 @@
 #import "HTLocationManager.h"
 
 @interface HTDashboardViewController ()<HTBeaconRangingDelegate>
-@property (weak, nonatomic) IBOutlet UILabel *hintsNearbyStaticLabel;
-@property (weak, nonatomic) IBOutlet UILabel *beaconCountLabel;
-@property (weak, nonatomic) IBOutlet UIButton *validBeaconFoundButton;
 
+@property (nonatomic, weak) IBOutlet UILabel *hintsNearbyStaticLabel;
+@property (nonatomic, weak) IBOutlet UILabel *beaconCountLabel;
+@property (nonatomic, weak) IBOutlet UIButton *validBeaconFoundButton;
 @property (nonatomic, strong) CLBeacon *validBeacon;
 
 @end
@@ -68,4 +68,5 @@
     self.validBeaconFoundButton.hidden = YES;
     self.validBeacon = nil;
 }
+
 @end
