@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,28 +18,28 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="ParentView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Hints nearby" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYs-OD-eWP" userLabel="Number of Hints nearby Label">
-                                <rect key="frame" x="42" y="165" width="291" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Hints nearby" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYs-OD-eWP" userLabel="Number of Hints nearby Label">
+                                <rect key="frame" x="14.5" y="165" width="291" height="37"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="31"/>
                                 <color key="textColor" red="1" green="0.86666666670000003" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bU-hZ-gsd">
-                                <rect key="frame" x="177.5" y="217" width="20" height="48.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="41"/>
+                                <rect key="frame" x="145.5" y="217" width="29" height="71"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="60"/>
                                 <color key="textColor" red="1" green="0.86666666670000003" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uZ-Us-jtt" userLabel="ValidBeaconFoundButton">
-                                <rect key="frame" x="-0.5" y="627" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="508" width="320" height="60"/>
                                 <color key="backgroundColor" red="1" green="0.86666666670000003" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="vhw-2W-PKk"/>
+                                    <constraint firstAttribute="height" constant="60" id="vhw-2W-PKk"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
                                 <state key="normal" title="Psst! Wanna know something? 👀"/>
                                 <connections>
                                     <action selector="didPressValidBeaconFoundButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BvK-PV-a62"/>
@@ -68,6 +68,122 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+        <!--Messages View Controller-->
+        <scene sceneID="liZ-rl-qKH">
+            <objects>
+                <viewController storyboardIdentifier="HTMessagesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oor-WM-ugQ" customClass="HTMessagesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4gU-J8-fOe"/>
+                        <viewControllerLayoutGuide type="bottom" id="hbD-uX-QwW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bHH-lh-6FI" userLabel="ParentView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Pow-tW-6x9" userLabel="TableView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="508"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5d-xk-e2I">
+                                <rect key="frame" x="0.0" y="508" width="320" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.86666666670000003" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                <state key="normal" title="Add Note"/>
+                                <connections>
+                                    <action selector="AddNoteButtonPressed:" destination="oor-WM-ugQ" eventType="touchUpInside" id="U7f-vB-H6f"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hbD-uX-QwW" firstAttribute="top" secondItem="P5d-xk-e2I" secondAttribute="bottom" id="9wg-HY-jYW"/>
+                            <constraint firstItem="P5d-xk-e2I" firstAttribute="top" secondItem="Pow-tW-6x9" secondAttribute="bottom" id="Hmt-Ua-Qo4"/>
+                            <constraint firstItem="Pow-tW-6x9" firstAttribute="top" secondItem="4gU-J8-fOe" secondAttribute="bottom" constant="-64" id="M6X-cN-8U3"/>
+                            <constraint firstItem="hbD-uX-QwW" firstAttribute="top" secondItem="Pow-tW-6x9" secondAttribute="bottom" constant="60" id="NOe-Wr-Gw8"/>
+                            <constraint firstItem="P5d-xk-e2I" firstAttribute="centerX" secondItem="bHH-lh-6FI" secondAttribute="centerX" id="UMS-SY-Lh2"/>
+                            <constraint firstItem="Pow-tW-6x9" firstAttribute="leading" secondItem="bHH-lh-6FI" secondAttribute="leading" id="WeQ-03-Zzw"/>
+                            <constraint firstAttribute="trailing" secondItem="Pow-tW-6x9" secondAttribute="trailing" id="iyU-6O-CbH"/>
+                            <constraint firstItem="P5d-xk-e2I" firstAttribute="width" secondItem="bHH-lh-6FI" secondAttribute="width" id="lxB-eG-vcT"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="Pow-tW-6x9" id="qQc-B5-xbD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SqN-0b-Yzy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="791" y="123"/>
+        </scene>
+        <!--Compose View Controller-->
+        <scene sceneID="yCy-zw-vZq">
+            <objects>
+                <viewController storyboardIdentifier="HTComposeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BSF-B7-Zsk" customClass="HTComposeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="baR-IE-pPC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fxc-Zi-neE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zVz-1W-73u">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEi-gK-YT2">
+                                <rect key="frame" x="94" y="40" width="132" height="211"/>
+                                <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="PxT-ns-Vap"/>
+                                    <constraint firstAttribute="height" constant="211" id="aMo-EB-PdF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                <state key="normal" title="Add image"/>
+                                <connections>
+                                    <action selector="uploadPlaceholderButtonPressed:" destination="BSF-B7-Zsk" eventType="touchUpInside" id="cbC-PI-LuP"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Cool" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iCU-aX-VWm">
+                                <rect key="frame" x="15" y="271" width="290" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="bSb-WR-UlS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCu-bN-g1A">
+                                <rect key="frame" x="0.0" y="508" width="320" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.86666666670000003" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="l9d-9R-ZrW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                <state key="normal" title="Publish Note"/>
+                                <connections>
+                                    <action selector="publishNoteButtonPressed:" destination="BSF-B7-Zsk" eventType="touchUpInside" id="sMn-eW-Tlz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.070588235294117646" green="0.25098039215686274" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iCU-aX-VWm" firstAttribute="top" secondItem="ZEi-gK-YT2" secondAttribute="bottom" constant="20" id="2fn-f8-bqQ"/>
+                            <constraint firstItem="sCu-bN-g1A" firstAttribute="width" secondItem="zVz-1W-73u" secondAttribute="width" id="GpC-Vg-bcb"/>
+                            <constraint firstAttribute="trailing" secondItem="iCU-aX-VWm" secondAttribute="trailing" constant="15" id="JAx-Fq-TZg"/>
+                            <constraint firstItem="iCU-aX-VWm" firstAttribute="leading" secondItem="zVz-1W-73u" secondAttribute="leading" constant="15" id="R4m-GI-CnR"/>
+                            <constraint firstItem="Fxc-Zi-neE" firstAttribute="top" secondItem="sCu-bN-g1A" secondAttribute="bottom" id="W7o-A4-lbF"/>
+                            <constraint firstItem="ZEi-gK-YT2" firstAttribute="top" secondItem="baR-IE-pPC" secondAttribute="bottom" constant="20" id="X2r-KM-nfd"/>
+                            <constraint firstItem="ZEi-gK-YT2" firstAttribute="centerX" secondItem="zVz-1W-73u" secondAttribute="centerX" id="gYu-DU-H3b"/>
+                            <constraint firstItem="sCu-bN-g1A" firstAttribute="centerX" secondItem="zVz-1W-73u" secondAttribute="centerX" id="xeL-7c-zIB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputTextView" destination="iCU-aX-VWm" id="bZU-Yg-Oat"/>
+                        <outlet property="publishNoteButton" destination="sCu-bN-g1A" id="ScB-YW-Kbn"/>
+                        <outlet property="uploadPlaceholderButton" destination="ZEi-gK-YT2" id="mzK-YJ-s4H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xGn-g4-zDX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1450.4000000000001" y="122.78860569715144"/>
         </scene>
     </scenes>
 </document>
