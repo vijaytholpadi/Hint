@@ -15,6 +15,7 @@
 		CD2EEF5C1E6D6B780090C10E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD2EEF5A1E6D6B780090C10E /* LaunchScreen.storyboard */; };
 		CD2EEF671E6D6B780090C10E /* HintTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2EEF661E6D6B780090C10E /* HintTests.m */; };
 		CD2EEF781E6D702E0090C10E /* HTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2EEF771E6D702E0090C10E /* HTAppDelegate.m */; };
+		CD76220B1E70395100152618 /* CLBeacon+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = CD76220A1E70395100152618 /* CLBeacon+NSCoding.m */; };
 		CD9F18F91E6E8E1600A14E2F /* UIColor+HTColor.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9F18F81E6E8E1600A14E2F /* UIColor+HTColor.m */; };
 		CD9F18FE1E6E9D8D00A14E2F /* HTAppCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9F18FD1E6E9D8D00A14E2F /* HTAppCoordinator.m */; };
 		CD9F19051E6EAC5500A14E2F /* HTAuthenticationCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9F19041E6EAC5500A14E2F /* HTAuthenticationCoordinator.m */; };
@@ -61,6 +62,8 @@
 		CD2EEF681E6D6B780090C10E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD2EEF761E6D702E0090C10E /* HTAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTAppDelegate.h; sourceTree = "<group>"; };
 		CD2EEF771E6D702E0090C10E /* HTAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTAppDelegate.m; sourceTree = "<group>"; };
+		CD7622091E70395100152618 /* CLBeacon+NSCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLBeacon+NSCoding.h"; sourceTree = "<group>"; };
+		CD76220A1E70395100152618 /* CLBeacon+NSCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLBeacon+NSCoding.m"; sourceTree = "<group>"; };
 		CD9F18F71E6E8E1600A14E2F /* UIColor+HTColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HTColor.h"; sourceTree = "<group>"; };
 		CD9F18F81E6E8E1600A14E2F /* UIColor+HTColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HTColor.m"; sourceTree = "<group>"; };
 		CD9F18FC1E6E9D8D00A14E2F /* HTAppCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTAppCoordinator.h; sourceTree = "<group>"; };
@@ -237,9 +240,19 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		CD7622081E7034CB00152618 /* CLBeacon+NSCoding */ = {
+			isa = PBXGroup;
+			children = (
+				CD7622091E70395100152618 /* CLBeacon+NSCoding.h */,
+				CD76220A1E70395100152618 /* CLBeacon+NSCoding.m */,
+			);
+			path = "CLBeacon+NSCoding";
+			sourceTree = "<group>";
+		};
 		CD9F18F51E6E8DE700A14E2F /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				CD7622081E7034CB00152618 /* CLBeacon+NSCoding */,
 				CD9F18F61E6E8E0200A14E2F /* UIColor+HTColor */,
 			);
 			path = Categories;
@@ -492,6 +505,11 @@
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = PRT6NHDX32;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					CD2EEF611E6D6B780090C10E = {
 						CreatedOnToolsVersion = 8.2;
@@ -659,6 +677,7 @@
 				CD9F191A1E6ED29600A14E2F /* HTBeacon.m in Sources */,
 				CD9F192C1E6F272E00A14E2F /* HTNote.m in Sources */,
 				CD9F18F91E6E8E1600A14E2F /* UIColor+HTColor.m in Sources */,
+				CD76220B1E70395100152618 /* CLBeacon+NSCoding.m in Sources */,
 				CD9F190E1E6EC1DD00A14E2F /* HTServiceManager.m in Sources */,
 				CD9F19281E6EF07200A14E2F /* HTComposeViewController.m in Sources */,
 				CD9F19321E6F2AA100A14E2F /* HTNotesTableViewCell.m in Sources */,
