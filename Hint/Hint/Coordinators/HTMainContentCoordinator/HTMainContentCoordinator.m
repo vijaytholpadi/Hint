@@ -13,7 +13,7 @@
 #import "HTMessagesViewController.h"
 #import "HTComposeViewController.h"
 
-@interface HTMainContentCoordinator ()<HTDashBoardCoordinationDelegate, HTNotesCoordinationDelegate>
+@interface HTMainContentCoordinator ()<HTDashBoardCoordinationDelegate, HTNotesCoordinationDelegate, HTComposeCoordinationDelegate>
 @property (nonatomic, strong) UINavigationController *navigationController;
 @property (nonatomic, strong) NSMutableArray *childCoordinators;
 @end
@@ -43,13 +43,19 @@
     [self.navigationController pushViewController:messagesViewController animated:YES];
 }
 
+#pragma mark - HTDashBoardCoordinationDelegate Methods
 - (void)notesViewControllerDidTapAddNoteForBeacon:(CLBeacon *)beacon {
     HTComposeViewController *composeViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"HTComposeViewController"];
     composeViewController.beacon = beacon;
     [self.navigationController pushViewController:composeViewController animated:YES];
 }
 
-//Notification Deeplink - Beacon
+#pragma mark - HTComposeCoordinationDelegate Methods
+- (void)didPostNoteSuccessfully {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark - Notification Deeplink
 - (void)showNotesForBeacon:(CLBeacon*)beacon {
     [self dashboardViewControllerDidTapViewMessagesForBeacon:beacon];
 }
