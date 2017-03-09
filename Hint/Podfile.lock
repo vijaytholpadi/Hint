@@ -10,6 +10,7 @@ PODS:
     - Fabric (~> 1.6.3)
   - Fabric (1.6.11)
   - IQKeyboardManager (4.0.8)
+  - Keys (1.0.0)
   - Parse (1.14.2):
     - Bolts/Tasks (~> 1.8)
   - ParseUI (1.2.0):
@@ -22,8 +23,13 @@ DEPENDENCIES:
   - Crashlytics
   - Fabric
   - IQKeyboardManager
+  - Keys (from `Pods/CocoaPodsKeys`)
   - Parse
   - ParseUI
+
+EXTERNAL SOURCES:
+  Keys:
+    :path: Pods/CocoaPodsKeys
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
@@ -31,9 +37,10 @@ SPEC CHECKSUMS:
   Crashlytics: 79e236942ca1e7fc641df1feb9a275360a78ab6a
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   IQKeyboardManager: 1a8189fa153bf09044355ee0ad36826f6767e7f7
+  Keys: 9c35bf00f612ee1d48556f4a4b9b4551e224e90f
   Parse: 4335d65f40cb3d43190d723144bbe1afb9c38230
   ParseUI: af2eba584799da4a9fbdac0e178662d7438b502e
 
-PODFILE CHECKSUM: 5fee820575b89b5bf636f145ae8c0706c8502dd2
+PODFILE CHECKSUM: 754c914361c17c90d1d56ef1cf7865f9d6cfeef5
 
 COCOAPODS: 1.1.1

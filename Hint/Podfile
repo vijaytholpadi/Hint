@@ -20,3 +20,11 @@ target 'Hint' do
   end
 
 end
+
+plugin 'cocoapods-keys', {
+  :project => "Hint",
+  :keys => [
+    "ParseApplicationID",
+    "ParseClientKey",
+    "ParseServerURL"
+  ]}

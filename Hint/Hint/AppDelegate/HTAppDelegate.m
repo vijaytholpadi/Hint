@@ -19,10 +19,7 @@
 #import <Crashlytics/Crashlytics.h>
 #import <Parse/Parse.h>
 #import <IQKeyboardManager/IQKeyboardManager.h>
-
-static NSString *parseApplicationID = @"7e487db101990ea80db27b61463cbd9d4fed50ce";
-static NSString *parseClientKey = @"db7f3e1b2b1c47be8cc739c5c0fb808f2f531fbd";
-static NSString *parseServerURL = @"http://ec2-52-33-176-59.us-west-2.compute.amazonaws.com:80/parse";
+#import <Keys/HintKeys.h>
 
 @interface HTAppDelegate ()
 
@@ -69,9 +66,10 @@ static NSString *parseServerURL = @"http://ec2-52-33-176-59.us-west-2.compute.am
 
 - (void)configureParse {
     [Parse initializeWithConfiguration:[ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration>  _Nonnull configuration) {
-        configuration.applicationId = parseApplicationID;
-        configuration.clientKey = parseClientKey;
-        configuration.server = parseServerURL;
+        HintKeys *keys = [[HintKeys alloc] init];
+        configuration.applicationId = keys.parseApplicationID;
+        configuration.clientKey = keys.parseClientKey;
+        configuration.server = keys.parseServerURL;
         configuration.localDatastoreEnabled = YES;
     }]];
 
