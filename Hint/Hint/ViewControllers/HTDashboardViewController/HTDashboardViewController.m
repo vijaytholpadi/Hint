@@ -35,11 +35,11 @@
 }
 
 - (void)themeScreen {
-    [self.view setBackgroundColor:[UIColor ht_BlueColor]];
-    [self.hintsNearbyStaticLabel setTextColor:[UIColor ht_YellowColor]];
-    [self.beaconCountLabel setTextColor:[UIColor ht_YellowColor]];
+    self.view.backgroundColor = [UIColor ht_BlueColor];
+    self.hintsNearbyStaticLabel.textColor = [UIColor ht_YellowColor];
+    self.beaconCountLabel.textColor = [UIColor ht_YellowColor];
+    self.validBeaconFoundButton.backgroundColor = [UIColor ht_YellowColor];
     [self.validBeaconFoundButton setTitleColor:[UIColor ht_BlueColor] forState:UIControlStateNormal];
-    [self.validBeaconFoundButton setBackgroundColor:[UIColor ht_YellowColor]];
 }
 
 - (void)didReceiveMemoryWarning {

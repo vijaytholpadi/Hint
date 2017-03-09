@@ -8,6 +8,9 @@
 
 #import "HTMessagesViewController.h"
 
+//Categories
+#import "UIColor+HTColor.h"
+
 //Datasource and Delegates
 #import "HTMessagesTableViewDataSource.h"
 #import "HTMessagesTableViewDelegate.h"
@@ -25,6 +28,7 @@ static NSString *notesTableViewCell = @"HTNotesTableViewCell";
 @property (nonatomic, strong) HTMessagesTableViewDataSource *tableViewDataSource;
 @property (nonatomic, strong) HTMessagesTableViewDelegate *tableViewDelegate;
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIButton *addNoteButton;
 
 @end
 
@@ -33,9 +37,17 @@ static NSString *notesTableViewCell = @"HTNotesTableViewCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self themeScreen];
     [self setupTableViewDataSourceDelegate];
     [self configureTableView];
     [self fetchDataForBeacon:self.beacon];
+}
+
+- (void)themeScreen {
+    self.view.backgroundColor = [UIColor ht_BlueColor];
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.addNoteButton.backgroundColor = [UIColor ht_YellowColor];
+    [self.addNoteButton setTitleColor:[UIColor ht_BlueColor] forState:UIControlStateNormal];
 }
 
 - (void)setupTableViewDataSourceDelegate {
@@ -65,7 +77,7 @@ static NSString *notesTableViewCell = @"HTNotesTableViewCell";
     [super didReceiveMemoryWarning];
 }
 
-- (IBAction)AddNoteButtonPressed:(id)sender {
+- (IBAction)addNoteButtonPressed:(id)sender {
     [self.delegate notesViewControllerDidTapAddNoteForBeacon:self.beacon];
 }
 

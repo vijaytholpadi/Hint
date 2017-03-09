@@ -8,6 +8,9 @@
 
 #import "HTComposeViewController.h"
 
+//Categories
+#import "UIColor+HTColor.h"
+
 //Manager
 #import "HTServiceManager.h"
 
@@ -26,6 +29,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self themeScreen];
+}
+
+- (void)themeScreen {
+    self.view.backgroundColor = [UIColor ht_BlueColor];
+    self.publishNoteButton.backgroundColor = [UIColor ht_YellowColor];
+    [self.publishNoteButton setTitleColor:[UIColor ht_BlueColor] forState:UIControlStateNormal];
 }
 
 -(void)didReceiveMemoryWarning {
