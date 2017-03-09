@@ -34,9 +34,13 @@
 
 + (void)postMessage:(HTNote*)note forBeacon:(CLBeacon*)beacon withCompletion:(notesPostCompletionBlock)completionBlock {
     PFObject *pfNote = [[PFObject alloc] initWithClassName:@"Note"];
-    pfNote[@"photo"] = note.image;
     pfNote[@"text"] = note.text;
     pfNote[@"user"] = [PFUser currentUser];
+
+    //If Image is present only then attach image
+    if (note.image) {
+        pfNote[@"photo"] = note.image;
+    }
 
     PFQuery *query = [PFQuery queryWithClassName:@"Beacon"];
     [query whereKey:@"UUID" equalTo:beacon.proximityUUID.UUIDString];
@@ -59,7 +63,6 @@
         [pfNote saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
             completionBlock(succeeded, error);
         }];
-
     }];
 }
 
