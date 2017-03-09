@@ -46,6 +46,7 @@
 #pragma mark - HTDashBoardCoordinationDelegate Methods
 - (void)notesViewControllerDidTapAddNoteForBeacon:(CLBeacon *)beacon {
     HTComposeViewController *composeViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"HTComposeViewController"];
+    composeViewController.delegate = self;
     composeViewController.beacon = beacon;
     [self.navigationController pushViewController:composeViewController animated:YES];
 }
