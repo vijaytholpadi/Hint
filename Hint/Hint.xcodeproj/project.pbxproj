@@ -19,6 +19,7 @@
 		CD76220F1E71B11C00152618 /* HTNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD76220E1E71B11C00152618 /* HTNotesViewController.m */; };
 		CD7622131E71B17A00152618 /* HTNotesTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7622121E71B17A00152618 /* HTNotesTableViewDataSource.m */; };
 		CD7622171E71B18700152618 /* HTNotesTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7622161E71B18700152618 /* HTNotesTableViewDelegate.m */; };
+		CD76221B1E71B9A100152618 /* NSDate+HTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CD76221A1E71B9A100152618 /* NSDate+HTAdditions.m */; };
 		CD9F18F91E6E8E1600A14E2F /* UIColor+HTColor.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9F18F81E6E8E1600A14E2F /* UIColor+HTColor.m */; };
 		CD9F18FE1E6E9D8D00A14E2F /* HTAppCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9F18FD1E6E9D8D00A14E2F /* HTAppCoordinator.m */; };
 		CD9F19051E6EAC5500A14E2F /* HTAuthenticationCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9F19041E6EAC5500A14E2F /* HTAuthenticationCoordinator.m */; };
@@ -70,6 +71,8 @@
 		CD7622121E71B17A00152618 /* HTNotesTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTNotesTableViewDataSource.m; sourceTree = "<group>"; };
 		CD7622151E71B18700152618 /* HTNotesTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTNotesTableViewDelegate.h; sourceTree = "<group>"; };
 		CD7622161E71B18700152618 /* HTNotesTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTNotesTableViewDelegate.m; sourceTree = "<group>"; };
+		CD7622191E71B9A100152618 /* NSDate+HTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+HTAdditions.h"; sourceTree = "<group>"; };
+		CD76221A1E71B9A100152618 /* NSDate+HTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+HTAdditions.m"; sourceTree = "<group>"; };
 		CD9F18F71E6E8E1600A14E2F /* UIColor+HTColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HTColor.h"; sourceTree = "<group>"; };
 		CD9F18F81E6E8E1600A14E2F /* UIColor+HTColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HTColor.m"; sourceTree = "<group>"; };
 		CD9F18FC1E6E9D8D00A14E2F /* HTAppCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTAppCoordinator.h; sourceTree = "<group>"; };
@@ -275,9 +278,19 @@
 			path = HTNotesTableViewDelegate;
 			sourceTree = "<group>";
 		};
+		CD7622181E71B99200152618 /* NSDate+HTAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				CD7622191E71B9A100152618 /* NSDate+HTAdditions.h */,
+				CD76221A1E71B9A100152618 /* NSDate+HTAdditions.m */,
+			);
+			path = "NSDate+HTAdditions";
+			sourceTree = "<group>";
+		};
 		CD9F18F51E6E8DE700A14E2F /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				CD7622181E71B99200152618 /* NSDate+HTAdditions */,
 				CD7622081E7034CB00152618 /* CLBeacon+NSCoding */,
 				CD9F18F61E6E8E0200A14E2F /* UIColor+HTColor */,
 			);
@@ -662,6 +675,7 @@
 			files = (
 				CD2EEF781E6D702E0090C10E /* HTAppDelegate.m in Sources */,
 				CDECA4EF1E6D8E2900EE1E2B /* HTDashboardViewController.m in Sources */,
+				CD76221B1E71B9A100152618 /* NSDate+HTAdditions.m in Sources */,
 				CD9F191A1E6ED29600A14E2F /* HTBeacon.m in Sources */,
 				CD9F192C1E6F272E00A14E2F /* HTNote.m in Sources */,
 				CD9F18F91E6E8E1600A14E2F /* UIColor+HTColor.m in Sources */,
