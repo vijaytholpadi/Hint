@@ -10,7 +10,7 @@
 
 //ViewControllers
 #import "HTDashboardViewController.h"
-#import "HTMessagesViewController.h"
+#import "HTNotesViewController.h"
 #import "HTComposeViewController.h"
 
 @interface HTMainContentCoordinator ()<HTDashBoardCoordinationDelegate, HTNotesCoordinationDelegate, HTComposeCoordinationDelegate>
@@ -35,12 +35,12 @@
 }
 
 #pragma mark - HTDashBoardCoordinationDelegate Methods
-- (void)dashboardViewControllerDidTapViewMessagesForBeacon:(CLBeacon *)beacon {
+- (void)dashboardViewControllerDidTapViewNotesForBeacon:(CLBeacon *)beacon {
     //TODO: Move the network call to this level
-    HTMessagesViewController *messagesViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"HTMessagesViewController"];
-    messagesViewController.delegate = self;
-    messagesViewController.beacon = beacon;
-    [self.navigationController pushViewController:messagesViewController animated:YES];
+    HTNotesViewController *notesViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"HTNotesViewController"];
+    notesViewController.delegate = self;
+    notesViewController.beacon = beacon;
+    [self.navigationController pushViewController:notesViewController animated:YES];
 }
 
 #pragma mark - HTDashBoardCoordinationDelegate Methods
@@ -58,7 +58,7 @@
 
 #pragma mark - Notification Deeplink
 - (void)showNotesForBeacon:(CLBeacon*)beacon {
-    [self dashboardViewControllerDidTapViewMessagesForBeacon:beacon];
+    [self dashboardViewControllerDidTapViewNotesForBeacon:beacon];
 }
 
 @end

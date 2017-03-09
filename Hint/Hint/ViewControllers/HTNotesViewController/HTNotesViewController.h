@@ -1,5 +1,5 @@
 //
-//  HTMessagesViewController.h
+//  HTNotesViewController.h
 //  Hint
 //
 //  Created by Vijay Tholpadi on 3/7/17.
@@ -16,7 +16,7 @@
 
 @end
 
-@interface HTMessagesViewController : UIViewController
+@interface HTNotesViewController : UIViewController
 
 @property (nonatomic, weak) id <HTNotesCoordinationDelegate> delegate;
 @property (nonatomic, strong) CLBeacon *beacon;

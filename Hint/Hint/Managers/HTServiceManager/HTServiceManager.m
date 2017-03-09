@@ -16,7 +16,7 @@
 
 @implementation HTServiceManager
 
-+ (void)getMessagesForBeacon:(CLBeacon*)beacon withCompletion:(notesFetchCompletionBlock)completionBlock {
++ (void)getNotesForBeacon:(CLBeacon*)beacon withCompletion:(notesFetchCompletionBlock)completionBlock {
     PFQuery *query = [PFQuery queryWithClassName:@"Beacon"];
     [query whereKey:@"UUID" equalTo:beacon.proximityUUID.UUIDString];
     [query whereKey:@"major" equalTo:beacon.major.stringValue];
@@ -32,7 +32,7 @@
     }];
 }
 
-+ (void)postMessage:(HTNote*)note forBeacon:(CLBeacon*)beacon withCompletion:(notesPostCompletionBlock)completionBlock {
++ (void)postNote:(HTNote*)note forBeacon:(CLBeacon*)beacon withCompletion:(notesPostCompletionBlock)completionBlock {
     PFObject *pfNote = [[PFObject alloc] initWithClassName:@"Note"];
     pfNote[@"text"] = note.text;
     pfNote[@"user"] = [PFUser currentUser];

@@ -1,19 +1,19 @@
 //
-//  HTMessagesViewController.m
+//  HTNotesViewController.m
 //  Hint
 //
 //  Created by Vijay Tholpadi on 3/7/17.
 //  Copyright © 2017 TheGeekProjekt. All rights reserved.
 //
 
-#import "HTMessagesViewController.h"
+#import "HTNotesViewController.h"
 
 //Categories
 #import "UIColor+HTColor.h"
 
 //Datasource and Delegates
-#import "HTMessagesTableViewDataSource.h"
-#import "HTMessagesTableViewDelegate.h"
+#import "HTNotesTableViewDataSource.h"
+#import "HTNotesTableViewDelegate.h"
 
 //Managers
 #import "HTServiceManager.h"
@@ -23,16 +23,16 @@
 
 static NSString *notesTableViewCell = @"HTNotesTableViewCell";
 
-@interface HTMessagesViewController ()
+@interface HTNotesViewController ()
 
-@property (nonatomic, strong) HTMessagesTableViewDataSource *tableViewDataSource;
-@property (nonatomic, strong) HTMessagesTableViewDelegate *tableViewDelegate;
+@property (nonatomic, strong) HTNotesTableViewDataSource *tableViewDataSource;
+@property (nonatomic, strong) HTNotesTableViewDelegate *tableViewDelegate;
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *addNoteButton;
 
 @end
 
-@implementation HTMessagesViewController
+@implementation HTNotesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -52,11 +52,11 @@ static NSString *notesTableViewCell = @"HTNotesTableViewCell";
 
 - (void)setupTableViewDataSourceDelegate {
     //DataSource
-    self.tableViewDataSource = [HTMessagesTableViewDataSource new];
+    self.tableViewDataSource = [HTNotesTableViewDataSource new];
     self.tableView.dataSource = self.tableViewDataSource;
 
     //Delegate
-    self.tableViewDelegate = [HTMessagesTableViewDelegate new];
+    self.tableViewDelegate = [HTNotesTableViewDelegate new];
     self.tableView.delegate = self.tableViewDelegate;
 }
 
@@ -68,7 +68,7 @@ static NSString *notesTableViewCell = @"HTNotesTableViewCell";
 }
 
 - (void)fetchDataForBeacon:(CLBeacon*)beacon {
-    [HTServiceManager getMessagesForBeacon:beacon withCompletion:^(NSArray *notes) {
+    [HTServiceManager getNotesForBeacon:beacon withCompletion:^(NSArray *notes) {
         self.tableViewDataSource.notes = [HTNote getNotesArrayForRawArray:notes];
         [self.tableView reloadData];
     }];

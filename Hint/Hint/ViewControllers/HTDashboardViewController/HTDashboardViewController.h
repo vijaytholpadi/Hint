@@ -13,7 +13,7 @@
 @protocol HTDashBoardCoordinationDelegate <NSObject>
 
 @required
-- (void)dashboardViewControllerDidTapViewMessagesForBeacon:(CLBeacon*)beacon;
+- (void)dashboardViewControllerDidTapViewNotesForBeacon:(CLBeacon*)beacon;
 
 @end
 

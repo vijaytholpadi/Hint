@@ -1,5 +1,5 @@
 //
-//  HTMessagesTableViewDelegate.h
+//  HTNotesTableViewDelegate.h
 //  Hint
 //
 //  Created by Vijay Tholpadi on 3/7/17.
@@ -10,5 +10,5 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface HTMessagesTableViewDelegate : NSObject<UITableViewDelegate>
+@interface HTNotesTableViewDelegate : NSObject<UITableViewDelegate>
 @end

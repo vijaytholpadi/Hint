@@ -69,10 +69,10 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
-        <!--Messages View Controller-->
+        <!--Notes View Controller-->
         <scene sceneID="liZ-rl-qKH">
             <objects>
-                <viewController storyboardIdentifier="HTMessagesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oor-WM-ugQ" customClass="HTMessagesViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HTNotesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oor-WM-ugQ" customClass="HTNotesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4gU-J8-fOe"/>
                         <viewControllerLayoutGuide type="bottom" id="hbD-uX-QwW"/>

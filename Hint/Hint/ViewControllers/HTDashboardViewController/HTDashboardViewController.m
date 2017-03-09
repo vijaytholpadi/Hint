@@ -48,7 +48,7 @@
 
 #pragma mark - IBAction methods
 - (IBAction)didPressValidBeaconFoundButton:(id)sender {
-    [self.delegate dashboardViewControllerDidTapViewMessagesForBeacon:self.validBeacon];
+    [self.delegate dashboardViewControllerDidTapViewNotesForBeacon:self.validBeacon];
 }
 
 #pragma mark - HTBeaconRangingDelegate methods
@@ -58,13 +58,13 @@
 }
 
 - (void)didFindInterestRegionBeacon:(CLBeacon *)beacon {
-    //Enable button to goto MessagesViewController
+    //Enable button to goto NotessViewController
     self.validBeaconFoundButton.hidden = NO;
     self.validBeacon = beacon;
 }
 
 - (void)didLoseInterestRegionBeacon {
-    //Disable/Clear button to goto MessageViewController
+    //Disable/Clear button to goto NoteViewController
     self.validBeaconFoundButton.hidden = YES;
     self.validBeacon = nil;
 }

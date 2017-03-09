@@ -17,6 +17,6 @@ typedef void(^notesPostCompletionBlock)(BOOL succeeded, NSError * _Nullable erro
 @class CLBeacon;
 
 @interface HTServiceManager : NSObject
-+ (void)getMessagesForBeacon:(CLBeacon*)beacon withCompletion:(notesFetchCompletionBlock)completionBlock;
-+ (void)postMessage:(HTNote*)note forBeacon:(CLBeacon*)beacon withCompletion:(notesPostCompletionBlock)completionBlock;
++ (void)getNotesForBeacon:(CLBeacon*)beacon withCompletion:(notesFetchCompletionBlock)completionBlock;
++ (void)postNote:(HTNote*)note forBeacon:(CLBeacon*)beacon withCompletion:(notesPostCompletionBlock)completionBlock;
 @end

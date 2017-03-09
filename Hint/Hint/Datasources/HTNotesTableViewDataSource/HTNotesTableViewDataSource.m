@@ -1,12 +1,12 @@
 //
-//  HTMessagesTableViewDataSource.m
+//  HTNotesTableViewDataSource.m
 //  Hint
 //
 //  Created by Vijay Tholpadi on 3/7/17.
 //  Copyright © 2017 TheGeekProjekt. All rights reserved.
 //
 
-#import "HTMessagesTableViewDataSource.h"
+#import "HTNotesTableViewDataSource.h"
 
 //Models
 #import "HTNote.h"
@@ -14,7 +14,7 @@
 //Views
 #import "HTNotesTableViewCell.h"
 
-@implementation HTMessagesTableViewDataSource
+@implementation HTNotesTableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;

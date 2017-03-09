@@ -1,5 +1,5 @@
 //
-//  HTMessagesTableViewDataSource.h
+//  HTNotesTableViewDataSource.h
 //  Hint
 //
 //  Created by Vijay Tholpadi on 3/7/17.
@@ -10,7 +10,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface HTMessagesTableViewDataSource : NSObject<UITableViewDataSource>
+@interface HTNotesTableViewDataSource : NSObject<UITableViewDataSource>
 
 @property (nonatomic, strong) NSArray *notes;
 

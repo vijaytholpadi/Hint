@@ -85,7 +85,7 @@
     }
     note.text = self.inputTextView.text;
 
-    [HTServiceManager postMessage:note forBeacon:self.beacon withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
+    [HTServiceManager postNote:note forBeacon:self.beacon withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
         if(succeeded) {
             [self.delegate didPostNoteSuccessfully];
         }
