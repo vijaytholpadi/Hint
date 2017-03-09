@@ -64,6 +64,7 @@ static NSString *notesTableViewCell = @"HTNotesTableViewCell";
     [self.tableView registerNib:[UINib nibWithNibName:@"HTNotesTableViewCell" bundle:nil] forCellReuseIdentifier:notesTableViewCell];
     self.tableView.estimatedRowHeight = 100.0f;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 - (void)fetchDataForBeacon:(CLBeacon*)beacon {
