@@ -210,7 +210,6 @@
 			children = (
 				CD9F190F1E6EC5DA00A14E2F /* HTBeacon */,
 				CD9F19291E6F218F00A14E2F /* HTNote */,
-				CD9F19111E6EC5DA00A14E2F /* HTUser */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -320,13 +319,6 @@
 				CD9F19191E6ED29600A14E2F /* HTBeacon.m */,
 			);
 			path = HTBeacon;
-			sourceTree = "<group>";
-		};
-		CD9F19111E6EC5DA00A14E2F /* HTUser */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = HTUser;
 			sourceTree = "<group>";
 		};
 		CD9F19141E6ECEB400A14E2F /* HTMessagesViewController */ = {
