@@ -142,7 +142,7 @@
                                     <action selector="uploadPlaceholderButtonPressed:" destination="BSF-B7-Zsk" eventType="touchUpInside" id="cbC-PI-LuP"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Cool" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iCU-aX-VWm">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iCU-aX-VWm">
                                 <rect key="frame" x="15" y="271" width="290" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
