@@ -28,10 +28,7 @@ static NSInteger kPollingCooldownPeriodInSecs = 120;
             notification.alertBody = @"Psst! Check out this secret.";
             notification.alertAction = @"View Note";
             notification.soundName = @"default";
-            notification.userInfo = @{@"beacon":[beacon archivedData],
-                                      @"UUID":beacon.proximityUUID.UUIDString,
-                                      @"major":beacon.major,
-                                      @"minor":beacon.minor};
+            notification.userInfo = @{@"beacon":[beacon archivedData]};
 
             [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
 
